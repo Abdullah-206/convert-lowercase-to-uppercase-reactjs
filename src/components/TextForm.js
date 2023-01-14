@@ -18,13 +18,13 @@ export default  function TextForm(props) {
         console.log("on Change");
         setText(event.target.value);
     }
-    const [text, setText] = useState('Enter Text Here');
+    const [text, setText] = useState('');
   return (
     <>
         <div className='container'>
             <h1>{props.heading}</h1>
             <div className="mb-3">
-            <label for="myBox" className="form-label">Example textarea</label>
+            
             <textarea className="form-control" value={text} onChange={handleonChange} id="myBox" rows="3"></textarea>
             </div>
             <button type="button" className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
